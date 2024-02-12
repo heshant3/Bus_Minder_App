@@ -1,0 +1,35 @@
+{
+  "expo": {
+    "name": "Bus Minder",
+    "slug": "Bus_Minder",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#E8EEF1"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#E8EEF1"
+      },
+      "package": "com.heshant3.Bus_Minder"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": ["expo-font"],
+    "extra": {
+      "eas": {
+        "projectId": "4192e43c-6afc-411a-8f6f-9d484dbe766a"
+      }
+    }
+  }
+}
