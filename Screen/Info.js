@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {
   View,
   Text,
@@ -10,11 +9,6 @@ import {
 } from "react-native";
 import React, { useState, useEffect } from "react";
 import { Entypo } from "@expo/vector-icons";
-=======
-import { View, Text, SafeAreaView, StyleSheet, ScrollView } from "react-native";
-import React from "react";
-import { Ionicons, Entypo } from "@expo/vector-icons";
->>>>>>> 8e10b19b086f467ef8b824975f04816deb590b44
 
 import {
   useFonts,

@@ -4,12 +4,12 @@ import {
   Text,
   SafeAreaView,
   StyleSheet,
-  TouchableOpacity,
+  TouchableHighlight,
   Linking,
   Alert,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
-import MapView from "react-native-maps";
+
 import {
   useFonts,
   Poppins_400Regular,
@@ -69,7 +69,7 @@ export default function Location() {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.view1}>
-        <Text style={styles.head}>Location</Text>
+        <Text style={styles.head}> Location</Text>
       </View>
       <View style={styles.view2}>
         <View style={styles.view2_1}>
@@ -91,12 +91,13 @@ export default function Location() {
           </View>
         </View>
         <View style={styles.view2_2}>
-          <TouchableOpacity
+          <TouchableHighlight
             style={styles.button}
+            underlayColor={"#2b5cad"}
             onPress={handleOpenGoogleMaps}
           >
-            <Text style={styles.ButtonText}>Location</Text>
-          </TouchableOpacity>
+            <Text style={styles.ButtonText}>Track Location</Text>
+          </TouchableHighlight>
         </View>
       </View>
     </SafeAreaView>
