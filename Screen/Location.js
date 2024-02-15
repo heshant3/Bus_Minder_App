@@ -7,9 +7,15 @@ import {
   TouchableHighlight,
   Linking,
   Alert,
+  StatusBar,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
-
+import Animated, {
+  FadeInUp,
+  FadeInDown,
+  FadeInLeft,
+  FadeInRight,
+} from "react-native-reanimated";
 import {
   useFonts,
   Poppins_400Regular,
@@ -68,29 +74,46 @@ export default function Location() {
 
   return (
     <SafeAreaView style={styles.container}>
+      <StatusBar barStyle="dark-content" backgroundColor="#E8EEF1" />
       <View style={styles.view1}>
-        <Text style={styles.head}> Location</Text>
+        <Animated.Text
+          entering={FadeInUp.delay(100).duration(100).springify()}
+          style={styles.head}
+        >
+          {" "}
+          Location
+        </Animated.Text>
       </View>
       <View style={styles.view2}>
         <View style={styles.view2_1}>
           <View style={styles.Route}>
-            <View style={styles.RouteBox}>
+            <Animated.View
+              entering={FadeInLeft.delay(100).duration(100).springify()}
+              style={styles.RouteBox}
+            >
               <Text style={styles.RouteNumText}>EX 1-2</Text>
               <Text style={styles.RouteText}>Colombo - Matara</Text>
-            </View>
+            </Animated.View>
           </View>
           <View style={styles.BookInfo}>
-            <View style={styles.ReservedView}>
+            <Animated.View
+              entering={FadeInRight.delay(100).duration(100).springify()}
+              style={styles.ReservedView}
+            >
               <View style={styles.ReservedBox}>
                 <Ionicons name="speedometer" size={24} color="#2889eb" />
               </View>
               <Text style={styles.BookInfoText}>
                 {SpeedValue ? SpeedValue.toFixed(1) : "0.00"} km/h
               </Text>
-            </View>
+            </Animated.View>
           </View>
         </View>
-        <View style={styles.view2_2}>
+
+        <Animated.View
+          entering={FadeInDown.delay(100).duration(100).springify()}
+          style={styles.view2_2}
+        >
           <TouchableHighlight
             style={styles.button}
             underlayColor={"#2b5cad"}
@@ -98,7 +121,7 @@ export default function Location() {
           >
             <Text style={styles.ButtonText}>Track Location</Text>
           </TouchableHighlight>
-        </View>
+        </Animated.View>
       </View>
     </SafeAreaView>
   );

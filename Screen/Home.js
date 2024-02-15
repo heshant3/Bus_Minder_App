@@ -1,7 +1,13 @@
-import { View, Text, SafeAreaView, StyleSheet } from "react-native";
+import { View, Text, SafeAreaView, StyleSheet, StatusBar } from "react-native";
 import { ref, onValue } from "firebase/database";
 import { db } from "../config";
 import React, { useState, useEffect } from "react";
+import Animated, {
+  FadeInUp,
+  FadeInDown,
+  FadeInLeft,
+  FadeInRight,
+} from "react-native-reanimated";
 
 import {
   useFonts,
@@ -115,11 +121,18 @@ export default function Home() {
       style={styles.container}
       contentInsetAdjustmentBehavior="automatic"
     >
+      <StatusBar barStyle="dark-content" backgroundColor="#E8EEF1" />
       {/* 
      Head viewport
     */}
       <View style={styles.view1}>
-        <Text style={styles.head}> Seat availability</Text>
+        <Animated.Text
+          entering={FadeInUp.delay(100).duration(100).springify()}
+          style={styles.head}
+        >
+          {" "}
+          Seat availability
+        </Animated.Text>
       </View>
       {/* 
      Bottom viewport
@@ -127,12 +140,18 @@ export default function Home() {
       <View style={styles.view2}>
         <View style={styles.view2_1}>
           <View style={styles.Route}>
-            <View style={styles.RouteBox}>
+            <Animated.View
+              entering={FadeInLeft.delay(100).duration(200).springify()}
+              style={styles.RouteBox}
+            >
               <Text style={styles.RouteNumText}>EX 1-2</Text>
               <Text style={styles.RouteText}>Colombo - Matara</Text>
-            </View>
+            </Animated.View>
           </View>
-          <View style={styles.BookInfo}>
+          <Animated.View
+            entering={FadeInRight.delay(100).duration(200).springify()}
+            style={styles.BookInfo}
+          >
             <View style={styles.ReservedView}>
               <Text style={styles.BookInfoText}>Reserved</Text>
               <View style={styles.ReservedBox}></View>
@@ -141,14 +160,22 @@ export default function Home() {
               <Text style={styles.BookInfoText}>Available</Text>
               <View style={styles.AvailableBox}></View>
             </View>
-          </View>
+          </Animated.View>
         </View>
         <View style={styles.view2_2}>
-          <View style={styles.LeftBusViewPort}>
+          <Animated.View
+            entering={FadeInLeft.delay(100).duration(300).springify()}
+            style={styles.LeftBusViewPort}
+          >
             {/* Rendering seats dynamically */}
             {renderLeftSeats()}
-          </View>
-          <View style={styles.RightBusViewPort}>{renderRightSeats()}</View>
+          </Animated.View>
+          <Animated.View
+            entering={FadeInRight.delay(100).duration(300).springify()}
+            style={styles.RightBusViewPort}
+          >
+            {renderRightSeats()}
+          </Animated.View>
         </View>
       </View>
     </SafeAreaView>

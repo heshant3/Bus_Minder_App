@@ -6,10 +6,16 @@ import {
   ScrollView,
   Image,
   ActivityIndicator,
+  StatusBar,
 } from "react-native";
 import React, { useState, useEffect } from "react";
 import { Entypo } from "@expo/vector-icons";
-
+import Animated, {
+  FadeInUp,
+  FadeInDown,
+  FadeInLeft,
+  FadeInRight,
+} from "react-native-reanimated";
 import {
   useFonts,
   Poppins_400Regular,
@@ -52,16 +58,26 @@ export default function Info() {
       style={styles.container}
       contentInsetAdjustmentBehavior="automatic"
     >
+      <StatusBar barStyle="dark-content" backgroundColor="#E8EEF1" />
       <View style={styles.view1}>
-        <Text style={styles.head}> Additional info</Text>
+        <Animated.Text
+          entering={FadeInUp.delay(100).duration(100).springify()}
+          style={styles.head}
+        >
+          {" "}
+          Additional info
+        </Animated.Text>
       </View>
       <View style={styles.view2}>
         <View style={styles.view2_1}>
           <View style={styles.Route}>
-            <View style={styles.RouteBox}>
+            <Animated.View
+              entering={FadeInLeft.delay(100).duration(200).springify()}
+              style={styles.RouteBox}
+            >
               <Text style={styles.RouteNumText}>EX 1-2</Text>
               <Text style={styles.RouteText}>Colombo - Matara</Text>
-            </View>
+            </Animated.View>
           </View>
           <View style={styles.BookInfo}></View>
         </View>
@@ -70,7 +86,10 @@ export default function Info() {
             contentContainerStyle={styles.scroll}
             showsVerticalScrollIndicator={false}
           >
-            <View style={styles.InfoDetailsBox}>
+            <Animated.View
+              entering={FadeInUp.delay(100).duration(300).springify()}
+              style={styles.InfoDetailsBox}
+            >
               <View style={styles.BoxTop}>
                 <Text style={styles.BoxTopText}>Departure on:</Text>
                 <Text style={styles.BoxTopText}>Travel time : 2hrs</Text>
@@ -102,8 +121,11 @@ export default function Info() {
                   </>
                 )}
               </View>
-            </View>
-            <View style={styles.ChartBox}>
+            </Animated.View>
+            <Animated.View
+              entering={FadeInDown.delay(100).duration(300).springify()}
+              style={styles.ChartBox}
+            >
               <View style={styles.ChartBoxHeader}>
                 <Text style={styles.ChartBoxHeaderText}>
                   Average passenger count
@@ -116,7 +138,7 @@ export default function Info() {
                   style={styles.image}
                 />
               </View>
-            </View>
+            </Animated.View>
           </ScrollView>
         </View>
       </View>

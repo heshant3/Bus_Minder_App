@@ -6,6 +6,7 @@ import {
   StyleSheet,
   ScrollView,
   Image,
+  StatusBar,
 } from "react-native";
 import React from "react";
 import {
@@ -16,6 +17,12 @@ import {
   Poppins_600SemiBold,
 } from "@expo-google-fonts/poppins";
 import { ScaledSheet } from "react-native-size-matters"; // Responsive scaling Library
+import Animated, {
+  FadeInUp,
+  FadeInDown,
+  FadeInLeft,
+  FadeInRight,
+} from "react-native-reanimated";
 
 function Bus({ navigation }) {
   let [fontsLoaded, fontError] = useFonts({
@@ -34,8 +41,15 @@ function Bus({ navigation }) {
       style={styles.container}
       contentInsetAdjustmentBehavior="automatic"
     >
+      <StatusBar barStyle="dark-content" backgroundColor="#E8EEF1" />
       <View style={styles.view1}>
-        <Text style={styles.head}> Select your route</Text>
+        <Animated.Text
+          entering={FadeInUp.delay(100).duration(100).springify()}
+          style={styles.head}
+        >
+          {" "}
+          Select your route
+        </Animated.Text>
       </View>
       <View style={styles.view2}>
         <ScrollView
