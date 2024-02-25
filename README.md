@@ -1,6 +1,6 @@
-# Bus_Minder_App
+# Bus Minder Mobille App
 
-"Welcome to Bus Minder, your comprehensive solution for efficient bus management and passenger tracking. Our app, built with React Native, seamlessly integrates IoT technology powered by Arduino to provide real-time insights into bus operations.
+"Welcome to Bus Minder, your comprehensive solution for efficient bus management and passenger tracking. Our app, built with** React Native**, seamlessly integrates **IoT technology powered by Arduino** to provide real-time insights into bus operations.
 
 **Key Features:**
 
@@ -14,7 +14,7 @@
 
 5. Monthly Passenger Analytics: Gain valuable insights into passenger trends and behaviors with detailed analytics generated over time. Analyze passenger counts, peak hours, popular routes, and more to enhance operational efficiency.
 
-Utilizing Firebase Realtime Database, our app ensures seamless data synchronization across devices, enabling instant updates and a smooth user experience.
+Utilizing Firebase **Realtime Database**, our app ensures seamless data synchronization across devices, enabling instant updates and a smooth user experience.
 
 With Bus Minder, streamline your bus management operations and elevate the commuter experience. Join us on GitHub to explore our codebase and contribute to the future of smart transportation!"
 
