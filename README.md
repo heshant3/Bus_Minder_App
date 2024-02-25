@@ -2,17 +2,17 @@
 
 "Welcome to Bus Minder, your comprehensive solution for efficient bus management and passenger tracking. Our app, built with React Native, seamlessly integrates IoT technology powered by Arduino to provide real-time insights into bus operations.
 
-Key Features:
+**Key Features:**
 
-Live Bus Location Tracking: Stay updated with the exact location of your bus in real-time, ensuring accurate arrival and departure times.
+1. Live Bus Location Tracking: Stay updated with the exact location of your bus in real-time, ensuring accurate arrival and departure times.
 
-Available Seat Tracking: Utilizing Arduino IoT sensors, our app enables you to check the availability of seats on the bus, helping you plan your journey conveniently.
+2. Available Seat Tracking: Utilizing Arduino IoT sensors, our app enables you to check the availability of seats on the bus, helping you plan your journey conveniently.
 
-Average Bus Speed Tracking: Monitor the average speed of the bus throughout its route, ensuring adherence to speed limits and optimizing travel time.
+3. Average Bus Speed Tracking: Monitor the average speed of the bus throughout its route, ensuring adherence to speed limits and optimizing travel time.
 
-Passenger Counting: With integrated passenger counting sensors, accurately track the number of passengers boarding and alighting at each stop.
+4. Passenger Counting: With integrated passenger counting sensors, accurately track the number of passengers boarding and alighting at each stop.
 
-Monthly Passenger Analytics: Gain valuable insights into passenger trends and behaviors with detailed analytics generated over time. Analyze passenger counts, peak hours, popular routes, and more to enhance operational efficiency.
+5. Monthly Passenger Analytics: Gain valuable insights into passenger trends and behaviors with detailed analytics generated over time. Analyze passenger counts, peak hours, popular routes, and more to enhance operational efficiency.
 
 Utilizing Firebase Realtime Database, our app ensures seamless data synchronization across devices, enabling instant updates and a smooth user experience.
 
