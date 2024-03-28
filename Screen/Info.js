@@ -229,38 +229,36 @@ const styles = ScaledSheet.create({
     marginBottom: 30,
     alignSelf: "center",
     backgroundColor: "#FFFFFF",
-    width: "80%",
-    height: "180@s",
+    width: "90%",
+    height: "45%",
     borderTopRightRadius: 10,
     borderRadius: 20,
-    // justifyContent: "center",
+    overflow: "hidden",
   },
 
   ChartBox: {
     marginBottom: 20,
     alignSelf: "center",
     backgroundColor: "#FFFFFF",
-    width: "80%",
-    height: "200@s",
+    width: "90%",
+    height: "220@mvs0.4",
     borderTopRightRadius: 10,
     borderRadius: 20,
+    overflow: "hidden",
   },
 
   BoxTopText: {
-    marginLeft: 25,
     alignSelf: "flex-start",
     color: "#787878",
     fontFamily: "Poppins_300Light",
-    fontSize: 20,
-    marginVertical: -5,
+    fontSize: "20@mvs0.1",
   },
 
   BoxTop: {
     marginTop: 20,
     flexDirection: "row",
-    justifyContent: "center",
-    alignSelf: "flex-start",
-    marginBottom: 20,
+    justifyContent: "space-evenly",
+    marginBottom: 5,
   },
 
   BoxMiddle: {
@@ -300,7 +298,6 @@ const styles = ScaledSheet.create({
     marginLeft: 30,
     flexDirection: "row",
     justifyContent: "center",
-    alignItems: "center",
     alignSelf: "flex-start",
   },
 
@@ -309,14 +306,14 @@ const styles = ScaledSheet.create({
     marginLeft: 10,
     color: "#787878",
     fontFamily: "Poppins_500Medium",
-    fontSize: 22,
+    fontSize: "20@mvs0.2",
   },
 
   PassengerCountText: {
     marginLeft: 5,
     color: "#252525",
     fontFamily: "Poppins_500Medium",
-    fontSize: 22,
+    fontSize: "20@mvs0.2",
   },
 
   ChartBoxHeader: {
@@ -328,20 +325,21 @@ const styles = ScaledSheet.create({
     marginLeft: 5,
     color: "#252525",
     fontFamily: "Poppins_500Medium",
-    fontSize: 22,
+    fontSize: "20@mvs0.1",
   },
 
   ChartBoxHeaderText2: {
     marginLeft: 5,
     color: "#787878",
     fontFamily: "Poppins_500Medium",
-    fontSize: 18,
+    fontSize: "16@mvs0.1",
   },
 
   image: {
-    top: "10@s",
-    left: "20@s",
-    width: "80%",
-    height: "80%",
+    marginTop: 6,
+    alignSelf: "center",
+    width: "78%",
+    height: "78%",
+    resizeMode: "contain",
   },
 });

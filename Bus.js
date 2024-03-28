@@ -47,7 +47,6 @@ function Bus({ navigation }) {
           entering={FadeInUp.delay(100).duration(100).springify()}
           style={styles.head}
         >
-          {" "}
           Select your route
         </Animated.Text>
       </View>
@@ -126,7 +125,7 @@ const styles = ScaledSheet.create({
   },
   head: {
     marginTop: "26@s",
-    fontSize: "25@s",
+    fontSize: "25@mvs1s",
     color: "#252525",
     alignSelf: "center",
     fontFamily: "Poppins_500Medium",
